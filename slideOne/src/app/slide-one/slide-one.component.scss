@@ -1,0 +1,110 @@
+img {
+max-width: 100%;
+}
+.containerImg {
+   height: 100%;
+
+   position: relative;
+   /* Para el colapsado de imagenes que genera un tamaño */
+   overflow: hidden;
+}
+.img-container {
+   position: absolute;
+   left: 0;
+   top: 0;
+   cursor: pointer;
+   height: auto !important;
+   opacity: 0;
+   background-size: cover;
+   background-position: center;
+   transition: opacity .3s;
+}
+
+/* Estilos para el div seleccionado */
+
+/* Estilo para cada boton del slider */
+/* Contenedor de los botonos para el slider */
+
+/* Cada uno de los div a seleccionar */
+.text-container {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.page-text {
+   min-height: 373px;
+   width: 50%;
+   height: 100%;
+   font-weight: 300;
+   font-size: 90px;
+   color: green;
+   opacity: 0;
+}
+/* Estilo para cuando se selecciona y mostrar la imagen */
+.selected {
+   opacity: 1;
+   transition: 1s;
+}
+.select-box{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.bullet-container {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   width: 100%;
+}
+.position-bullet-bottom{
+   bottom: 0;
+}
+.position-bullet-top{
+   top: 0;
+}
+.position-bullet-right{
+   right: -47%;
+   top: 10%;
+   display: block;
+}
+.position-bullet-left{
+   left: -48%;
+   top: 10%;
+   display: block;
+}
+.slide-button{
+   margin: 15px;
+   border: none;
+   border-radius: 50%;
+   background-image: linear-gradient(to right top, #ffffff, #f6f6f6, #ededed, #e5e5e5, #dcdcdc);
+   cursor: pointer;
+   transition: .3s ease-in-out all;
+}
+.bullet-size-x1{
+   width: 20px;
+   height: 20px;
+}
+.bullet-size-x2{
+   width: 25px;
+   height: 25px;
+}
+.bullet-size-x3{
+   width: 30px;
+   height: 30px;
+}
+.slide-button:hover{
+   box-shadow: 1px 0px 0px 5px #cfdaff88;
+}
+.radio-box{
+   display: none;
+}
+.slide-button-select {
+   cursor: pointer;
+   transform: scale(1.2);
+   transition: .3s transform ease;
+   background-image: linear-gradient(to right top, #5075de, #4263c8, #3452b3, #24419e, #123189);
+}
