@@ -1,22 +1,22 @@
-<div class="containerImg">
+<div class="content">
   <!-- Imagenes del carrousel -->
-  <div class="img-container" *ngFor="let image of slideArray; let select = index;" [ngClass]="{'selected': select === selectedIndex}">
+  <div class="content--img" *ngFor="let image of slideArray; let select = index;" [ngClass]="{'selected': select === selectedIndex}">
     <img [src]="image.img" [alt]="image.alt">
   </div>
   <!-- Para los titulos de cada imagen -->
-  <div>
-    <div class="text-container">
-      <div class="page-text" *ngFor="let txt of slideArray; let select = index;" [ngClass]="{'selected': select == selectedIndex}">
+  <div class="content--text">
+    <div class="text-container text-right">
+      <div class="page-text" *ngFor="let txt of slideArray; let select = index;" [ngClass]="{'selected animateText': select == selectedIndex }">
         <h3>{{ txt.text }}</h3>
       </div>
     </div>
   </div>
   <!-- Botones para el Slider (cada uno) -->
-  <ul class="bullet-container position-bullet-bottom">
-    <li class="slide-button-parent-container" *ngFor="let btn of slideArray; let i = index" (click)="selectedImg(i)">
-      <div class="select-box">
-        <input class="radio-box" type="radio" name="gender" [value]="btn.alt" [id]="btn.alt" (change)="chageRadio($event, i)">
-        <label class="slide-button bullet-size-x1" [ngClass]="{'slide-button-select': i === selectedIndex}" [for]="btn.alt"></label>
+  <ul class="content--bullet position-bottom">
+    <li *ngFor="let btn of slideArray; let i = index" (click)="selectedImg(i)">
+      <div class="order-bullet">
+        <input class="hidden-box" type="radio" name="gender" [value]="btn.alt" [id]="btn.alt" (change)="chageRadio($event, i)">
+        <label class="bullet-button bullet-size-x1" [ngClass]="{'bullet-button-select': i === selectedIndex}" [for]="btn.alt"></label>
       </div>
     </li>
   </ul>
