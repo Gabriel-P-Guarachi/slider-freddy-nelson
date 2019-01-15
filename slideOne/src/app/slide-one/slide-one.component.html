@@ -3,7 +3,6 @@
   <div class="img-container" *ngFor="let image of slideArray; let select = index;" [ngClass]="{'selected': select === selectedIndex}">
     <img [src]="image.img" [alt]="image.alt">
   </div>
-
   <!-- Para los titulos de cada imagen -->
   <div>
     <div class="text-container">
@@ -12,7 +11,6 @@
       </div>
     </div>
   </div>
-
   <!-- Botones para el Slider (cada uno) -->
   <ul class="bullet-container position-bullet-bottom">
     <li class="slide-button-parent-container" *ngFor="let btn of slideArray; let i = index" (click)="selectedImg(i)">
@@ -22,10 +20,36 @@
       </div>
     </li>
   </ul>
-
-  <div class="content-btn">
-    <button (click)="prevSlide($event)">PREVIEW</button>
-    <button (click)="nextSlide($event)">NEXT</button>
+  <div class="content-prev">
+    <button class="content-prev--button-prev" (click)="prevSlide($event)">
+      <svg class="svg-prev" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;"
+        xml:space="preserve">
+        <g>
+          <path d="M29.4,15c0,7.9-6.5,14.5-14.5,14.4C7,29.4,0.5,22.9,0.6,14.9C0.6,7,7.1,0.5,15.2,0.6C23,0.6,29.4,7.1,29.4,15z M27.8,15
+         c0-7.1-5.7-12.8-12.8-12.8C8,2.2,2.2,7.9,2.2,15c0,7.1,5.7,12.8,12.8,12.8C22.1,27.8,27.8,22.1,27.8,15z" />
+          <path class="circle-move" d="M17.4,14.1c-0.4-0.4-0.8-0.8-1.2-1.2c-0.3-0.3-0.4-0.7-0.1-1c0.3-0.4,0.8-0.5,1.2-0.1c0.7,0.7,1.4,1.4,2.1,2.1
+         c0.2,0.2,0.4,0.4,0.6,0.5c0.4,0.3,0.4,0.8,0,1.2c-0.9,0.9-1.8,1.8-2.7,2.7c-0.5,0.5-1.2,0.3-1.4-0.4c-0.1-0.3,0-0.5,0.2-0.7
+         c0.4-0.4,0.8-0.8,1.3-1.3c-0.2,0-0.3,0-0.4,0c-1.5,0-2.9,0-4.4,0c-0.7,0-1.1-0.6-0.8-1.1c0.2-0.4,0.5-0.5,0.9-0.5
+         c1.4,0,2.9,0,4.3,0C17.1,14.2,17.2,14.2,17.4,14.1C17.3,14.2,17.4,14.1,17.4,14.1z" />
+          <path class="bubble-move" d="M9.8,14.2c0.5,0,0.8,0.4,0.8,0.8c0,0.4-0.4,0.8-0.8,0.8C9.3,15.8,9,15.4,9,15C9,14.6,9.4,14.2,9.8,14.2z" />
+        </g>
+      </svg>
+    </button>
   </div>
-
+  <div class="content-next">
+    <button class="content-next--button-next" (click)="nextSlide($event)">
+      <svg version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;"
+        xml:space="preserve">
+        <g>
+          <path d="M29.4,15c0,7.9-6.5,14.5-14.5,14.4C7,29.4,0.5,22.9,0.6,14.9C0.6,7,7.1,0.5,15.2,0.6C23,0.6,29.4,7.1,29.4,15z M27.8,15
+         c0-7.1-5.7-12.8-12.8-12.8C8,2.2,2.2,7.9,2.2,15c0,7.1,5.7,12.8,12.8,12.8C22.1,27.8,27.8,22.1,27.8,15z" />
+          <path class="circle-move" d="M17.4,14.1c-0.4-0.4-0.8-0.8-1.2-1.2c-0.3-0.3-0.4-0.7-0.1-1c0.3-0.4,0.8-0.5,1.2-0.1c0.7,0.7,1.4,1.4,2.1,2.1
+         c0.2,0.2,0.4,0.4,0.6,0.5c0.4,0.3,0.4,0.8,0,1.2c-0.9,0.9-1.8,1.8-2.7,2.7c-0.5,0.5-1.2,0.3-1.4-0.4c-0.1-0.3,0-0.5,0.2-0.7
+         c0.4-0.4,0.8-0.8,1.3-1.3c-0.2,0-0.3,0-0.4,0c-1.5,0-2.9,0-4.4,0c-0.7,0-1.1-0.6-0.8-1.1c0.2-0.4,0.5-0.5,0.9-0.5
+         c1.4,0,2.9,0,4.3,0C17.1,14.2,17.2,14.2,17.4,14.1C17.3,14.2,17.4,14.1,17.4,14.1z" />
+          <path class="bubble-move" d="M9.8,14.2c0.5,0,0.8,0.4,0.8,0.8c0,0.4-0.4,0.8-0.8,0.8C9.3,15.8,9,15.4,9,15C9,14.6,9.4,14.2,9.8,14.2z" />
+        </g>
+      </svg>
+    </button>
+  </div>
 </div>

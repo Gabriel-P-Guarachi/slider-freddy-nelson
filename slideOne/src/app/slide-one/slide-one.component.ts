@@ -12,7 +12,7 @@ export class SlideOneComponent implements OnInit {
   interval: any;
 
   slideArray: any = [
-    { img: 'assets/images/uno.png', alt: 'uno', text: 'Titulo Para Imagen 1' },
+    { img: 'assets/images/uno.png', alt: 'uno', text: 'Con LBC estás preparado para cualquier accidente. 1' },
     { img: 'assets/images/dos.png', alt: 'dos', text: 'Titulo Para Imagen 2' },
     { img: 'assets/images/tres.png', alt: 'tres', text: 'Titulo Para Imagen 3' },
     { img: 'assets/images/cuatro.png', alt: 'cuatro', text: 'Titulo Para Imagen 4' },
@@ -36,7 +36,7 @@ export class SlideOneComponent implements OnInit {
       } else {
         this.selectedIndex = 0;
       }
-    }, 2000);
+    }, 5000);
   }
 
   chageRadio(event: any, id: number) {
