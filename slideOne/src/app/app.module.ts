@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { SlideOneComponent } from './slide-one/slide-one.component';
+import { SlideTwoComponent } from './slide-two/slide-two.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SlideOneComponent
+    SlideOneComponent,
+    SlideTwoComponent
   ],
   imports: [
     BrowserModule
