@@ -1,0 +1,35 @@
+.contentSlide-2 {
+  width: 100%;
+  height: 100%;
+}
+
+.contentImg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: tomato;
+
+  &__content {
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    position: absolute;
+    transition: transform .5s;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+// Entra el slide de izquierda a derecha
+.slideIn {
+  transform: translateX(0);
+  z-index: 1000;
+}
+// Sale el slide de izquierda a derecha
+.slideOut {
+  transform: translateX(100%);
+}

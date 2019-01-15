@@ -1,0 +1,25 @@
+
+<div class="contentSlide-2">
+
+  <div class="contentImg">
+
+    <div
+      *ngFor="let slide of slideArray"
+      class="contentImg__content"
+      [ngClass]="{ 'slideIn':  slide.slideIn, 'slideOut': slide.slideOut}">
+      <img class="contentImg__img" [src]="slide.img" [alt]="slide.alt">
+    </div>
+    <!--<div
+      class="contentImg__content"
+      [ngClass]="{ 'moveRight': transformRight, 'moveLeft': transformLeft }">
+      <img class="contentImg__img" src="assets/images/cuatro.png" alt="">
+    </div>-->
+
+  </div>
+
+  <div>
+    <button (click)="prevSlide()">Prev</button>
+    <button (click)="nextSlide()">Next</button>
+  </div>
+
+</div>
