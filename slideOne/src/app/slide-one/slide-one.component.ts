@@ -12,13 +12,13 @@ export class SlideOneComponent implements OnInit {
   interval: any;
 
   slideArray: any = [
-    { img: 'assets/images/uno.png', alt: 'uno', text: 'Con LBC estás preparado para cualquier accidente. 1' },
-    { img: 'assets/images/dos.png', alt: 'dos', text: 'LBC movil lista para ser parte de tu smarth phone.' },
-    { img: 'assets/images/tres.png', alt: 'tres', text: 'LBC movil acompañandote a donde vayas.' },
-    { img: 'assets/images/cuatro.png', alt: 'cuatro', text: 'LBC movil esta presente en tus momentos importantes' },
-    { img: 'assets/images/cinco.png', alt: 'cinco', text: 'LBC seguros siempre protegiendo a tu familia.' },
-    { img: 'assets/images/seis.png', alt: 'seis', text: 'LBC seguros para mascotas.' },
-    { img: 'assets/images/siete.png', alt: 'siete', text: 'La única plataforma de seguros que cubre y cuida a tus mascotas.' }
+    { img: 'assets/images/uno.jpg', alt: 'uno', text: 'Con LBC estás preparado para cualquier accidente. 1' },
+    { img: 'assets/images/dos.jpg', alt: 'dos', text: 'LBC movil lista para ser parte de tu smarth phone.' },
+    { img: 'assets/images/tres.jpg', alt: 'tres', text: 'LBC movil acompañandote a donde vayas.' },
+    { img: 'assets/images/cuatro.jpg', alt: 'cuatro', text: 'LBC movil esta presente en tus momentos importantes' },
+    { img: 'assets/images/cinco.jpg', alt: 'cinco', text: 'LBC seguros siempre protegiendo a tu familia.' },
+    { img: 'assets/images/seis.jpg', alt: 'seis', text: 'LBC seguros para mascotas.' },
+    { img: 'assets/images/siete.jpg', alt: 'siete', text: 'La única plataforma de seguros que cubre y cuida a tus mascotas.' }
   ];
   constructor() {
     this.interval = this.initAnimation();
